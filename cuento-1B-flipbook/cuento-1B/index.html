@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>La esmeralda perdida · 1º B · Colegio ICEI</title>
+  <meta name="description" content="Cuento interactivo de elige tu propia aventura escrito por 1º B del Colegio ICEI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cielo de fondo con estrellas animadas -->
+  <div class="cielo" aria-hidden="true">
+    <div class="estrellas capa1"></div>
+    <div class="estrellas capa2"></div>
+  </div>
+
+  <!-- ============ PANTALLA DE BIENVENIDA ============ -->
+  <section id="bienvenida" class="bienvenida">
+    <div class="bienvenida__caja">
+      <p class="bienvenida__curso">COLEGIO ICEI · 1º B · ¡SOMOS ESCRITORES!</p>
+      <h1 class="bienvenida__titulo">LA<br><span>ESMERALDA PERDIDA</span></h1>
+      <div class="bienvenida__personajes">
+        <img src="img/dibujo-huellitas.jpg" alt="Dibujo de Huellitas">
+        <img src="img/dibujo-extraterrestre.jpg" alt="Dibujo del Extraterrestre">
+        <img src="img/dibujo-galactico.jpg" alt="Dibujo de Galáctico">
+      </div>
+      <p class="bienvenida__sub">UN CUENTO DONDE <b>VOS ELEGÍS</b> QUÉ SUCEDE</p>
+      <button id="btnEmpezar" class="btn btn--grande" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        EMPEZAR A LEER
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ BARRA SUPERIOR ============ -->
+  <header class="barra">
+    <button id="btnInicio" class="btn btn--icono" type="button" title="Volver al inicio" aria-label="Volver al inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></svg>
+    </button>
+    <p class="barra__titulo">LA ESMERALDA PERDIDA · 1º B</p>
+    <button id="btnPantalla" class="btn btn--icono" type="button" title="Pantalla completa" aria-label="Pantalla completa">
+      <svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"/></svg>
+      <svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h2v6H4V8h4zm6 0h2v4h4v2h-6zM4 14h6v6H8v-4H4zm10 0h6v2h-4v4h-2z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ ESCENARIO DEL LIBRO ============ -->
+  <main id="escenario" class="escenario">
+    <div id="soporte" class="soporte">
+      <div id="libro" class="libro">
+
+        <!-- 0 · TAPA -->
+        <div class="page tapa" data-density="hard">
+          <div class="tapa__inner">
+            <p class="tapa__curso">COLEGIO ICEI · 1º B</p>
+            <h2 class="tapa__titulo">LA <span>ESMERALDA PERDIDA</span></h2>
+            <img class="tapa__ilus" src="img/tapa.svg" alt="Huellitas, el Extraterrestre y Galáctico en el espacio">
+            <p class="tapa__pie">UN CUENTO PARA ELEGIR TU PROPIA AVENTURA</p>
+          </div>
+        </div>
+
+        <!-- 1 · PORTADILLA -->
+        <div class="page">
+          <div class="hoja hoja--centro">
+            <p class="etiqueta">CUENTOS QUE ABREN CAMINOS</p>
+            <h3 class="portadilla__titulo">LA ESMERALDA PERDIDA</h3>
+            <p class="portadilla__autores">UN CUENTO ESCRITO E IMAGINADO POR<br>
+              <b class="c-g1">SIX SEVEN 67</b>, <b class="c-g2">MENDOZA</b><br>Y <b class="c-g3">GATO CON SOMBRERO</b>
+            </p>
+            <p class="portadilla__curso">1º GRADO B · COLEGIO ICEI · 2026</p>
+            <div class="huellitas" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <!-- 2 · CÓMO SE LEE -->
+        <div class="page">
+          <div class="hoja">
+            <h3 class="hoja__titulo">¿QUÉ ES UN CUENTO INTERACTIVO?</h3>
+            <ol class="pasos">
+              <li><span class="pasos__ico">📖</span>LEÉS EL CUENTO.</li>
+              <li><span class="pasos__ico">🪧</span>LLEGÁS A UN CRUCE. ¿QUÉ HACE EL PERSONAJE?</li>
+              <li><span class="pasos__ico"><i class="ab ab--a">A</i><i class="ab ab--b">B</i></span>VOS ELEGÍS EL CAMINO.</li>
+              <li><span class="pasos__ico">🏁</span>CADA CAMINO TIENE SU FINAL.</li>
+            </ol>
+            <p class="nota">TOCÁ LAS FLECHAS DE ABAJO PARA PASAR LAS PÁGINAS.</p>
+          </div>
+        </div>
+
+        <!-- 3 · NUESTROS PERSONAJES (dibujos originales) -->
+        <div class="page">
+          <div class="hoja">
+            <h3 class="hoja__titulo">NUESTROS PERSONAJES</h3>
+            <div class="galeria">
+              <figure class="ficha">
+                <img src="img/dibujo-huellitas.jpg" alt="Dibujo de Huellitas hecho por el grupo Mendoza">
+                <figcaption><b class="c-huellitas">HUELLITAS</b> PEQUEÑO, PELUDO Y TRAVIESO. QUIERE UN NUEVO AMIGO.<small>MENDOZA</small></figcaption>
+              </figure>
+              <figure class="ficha">
+                <img src="img/dibujo-extraterrestre.jpg" alt="Dibujo del Extraterrestre hecho por Six Seven 67">
+                <figcaption><b class="c-extra">EXTRATERRESTRE</b> PEQUEÑITO, VERDE Y AMABLE. QUIERE ESMERALDAS.<small>SIX SEVEN 67</small></figcaption>
+              </figure>
+              <figure class="ficha">
+                <img src="img/dibujo-galactico.jpg" alt="Dibujo de Galáctico hecho por Gato con Sombrero">
+                <figcaption><b class="c-galactico">GALÁCTICO</b> UN MONSTRUO MALO Y RARO. QUIERE CARNE.<small>GATO CON SOMBRERO</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 · NUESTROS LUGARES (dibujos originales) -->
+        <div class="page">
+          <div class="hoja">
+            <h3 class="hoja__titulo">NUESTROS LUGARES</h3>
+            <div class="lugares">
+              <figure><img src="img/dibujo-ciudad.jpg" alt="Dibujo de la ciudad fantástica"><figcaption>LA CIUDAD FANTÁSTICA <small>MENDOZA</small></figcaption></figure>
+              <figure><img src="img/dibujo-marte.jpg" alt="Dibujo del planeta Marte partido"><figcaption>EL PLANETA MARTE <small>SIX SEVEN 67</small></figcaption></figure>
+              <figure><img src="img/dibujo-planeta.jpg" alt="Dibujo del planeta desconocido con Saturno, el Sol y la Luna"><figcaption>EL PLANETA DESCONOCIDO <small>GATO CON SOMBRERO</small></figcaption></figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-ciudad.svg" alt="Huellitas en la ciudad fantástica con su pelota">
+            <p class="texto">EN UN LUGAR MUY LEJANO HABÍA UNA <b>CIUDAD FANTÁSTICA</b>. ALLÍ VIVÍA <b class="c-huellitas">HUELLITAS</b>, UN PERRO PEQUEÑO Y PELUDO. LE ENCANTABA JUGAR CON PELOTAS, PERO QUERÍA UN NUEVO AMIGO.</p>
+            <span class="num">1</span>
+          </div>
+        </div>
+
+        <!-- 6 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-nave.svg" alt="Una nave aterriza y baja el Extraterrestre">
+            <p class="texto">UNA MAÑANA… <span class="sonido">¡FIUUUM!</span> ATERRIZÓ UNA NAVE. DE ADENTRO SALIÓ UN <b class="c-extra">EXTRATERRESTRE</b> PEQUEÑITO, VERDE Y MUY AMABLE. —¡HOLA! VENGO DE MARTE —DIJO.</p>
+            <span class="num">2</span>
+          </div>
+        </div>
+
+        <!-- 7 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-marte.svg" alt="El planeta Marte lleno de esmeraldas">
+            <p class="texto"><b>MARTE</b> ES UN PLANETA ROJO LLENO DE <b>ESMERALDAS BRILLANTES</b>. AL EXTRATERRESTRE LE ENCANTA ANDAR EN SU NAVE Y JUNTAR ESMERALDAS.</p>
+            <span class="num">3</span>
+          </div>
+        </div>
+
+        <!-- 8 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-meteorito.svg" alt="Un meteorito golpea Marte y lo rompe">
+            <p class="texto">PERO DE PRONTO… <span class="sonido sonido--rojo">¡PUM!</span> CAYÓ UN METEORITO Y <b>SE PERDIÓ LA ESMERALDA MÁS IMPORTANTE</b>. SI NO LA ENCUENTRAN RÁPIDO, ¡MARTE SE VA A ROMPER POR LA MITAD!</p>
+            <span class="num">4</span>
+          </div>
+        </div>
+
+        <!-- 9 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-cohete.svg" alt="Huellitas y el Extraterrestre viajan en cohete">
+            <p class="texto"><b class="c-huellitas">HUELLITAS</b> Y EL <b class="c-extra">EXTRATERRESTRE</b> SUBIERON AL COHETE. <span class="sonido">¡FIUUUM!</span> HACÍA EL FUEGO DEL COHETE. VOLARON HASTA UN <b>PLANETA DESCONOCIDO</b> QUE FLOTABA EN EL ESPACIO.</p>
+            <span class="num">5</span>
+          </div>
+        </div>
+
+        <!-- 10 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-planeta.svg" alt="Un planeta oscuro y un ojo que brilla en la oscuridad">
+            <p class="texto">ERA UN PLANETA OSCURO Y SILENCIOSO. <span class="sonido">¡SHHH!</span> DE REPENTE APARECIÓ UN PERSONAJE MISTERIOSO CON UN SOLO OJO…</p>
+            <span class="num">6</span>
+          </div>
+        </div>
+
+        <!-- 11 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-galactico.svg" alt="Galáctico tiene la esmeralda y atrapó a Huellitas en una jaula">
+            <p class="texto">¡ERA <b class="c-galactico">GALÁCTICO</b>, UN MONSTRUO MALO Y RARO! TENÍA LA ESMERALDA Y ¡ATRAPÓ A HUELLITAS! —¡QUIERO CARNE! —GRUÑÓ. SI SE ENOJA, ¡PUEDE CREAR UNA EXPLOSIÓN!</p>
+            <span class="num">7</span>
+          </div>
+        </div>
+
+        <!-- 12 · CRUCE DE CAMINOS -->
+        <div class="page" data-rol="cruce">
+          <div class="hoja hoja--cruce">
+            <p class="etiqueta etiqueta--cruce">¡LLEGASTE A UN CRUCE!</p>
+            <img class="ilus ilus--chica" src="img/escena-cruce.svg" alt="Un cartel con dos caminos: A, la poción mágica, y B, la pelota">
+            <p class="pregunta">HUELLITAS ES UNA <b>MASCOTA MÁGICA</b>. ¿QUÉ HACEN LOS AMIGOS?</p>
+            <div class="opciones">
+              <button class="opcion opcion--a" type="button" data-camino="A">
+                <i>A</i><span>PREPARAN UNA POCIÓN MÁGICA</span>
+              </button>
+              <button class="opcion opcion--b" type="button" data-camino="B">
+                <i>B</i><span>LE TIRAN LA PELOTA A GALÁCTICO</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 · CAMINO A -->
+        <div class="page" data-rol="a-inicio">
+          <div class="hoja hoja--cuento camino-a">
+            <span class="cinta cinta--a">CAMINO A</span>
+            <img class="ilus" src="img/escena-a1.svg" alt="Huellitas y el Extraterrestre preparan una poción en un caldero">
+            <p class="texto"><b class="c-huellitas">HUELLITAS</b> SACUDIÓ SU PELO MÁGICO Y CAYÓ POLVO DE ESTRELLAS. EL <b class="c-extra">EXTRATERRESTRE</b> LO MEZCLÓ EN UN CALDERO. <span class="sonido">¡PUF!</span> ¡LISTA LA <b>POCIÓN MÁGICA</b>!</p>
+            <span class="num">A1</span>
+          </div>
+        </div>
+
+        <!-- 14 · CAMINO A -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-a">
+            <span class="cinta cinta--a">CAMINO A</span>
+            <img class="ilus" src="img/escena-a2.svg" alt="Galáctico come una montaña de albóndigas">
+            <p class="texto">TIRARON LA POCIÓN Y… ¡APARECIÓ UNA <b>MONTAÑA DE ALBÓNDIGAS</b>! <b class="c-galactico">GALÁCTICO</b> COMIÓ Y COMIÓ. <span class="sonido">¡ÑAM, ÑAM!</span> ¡POR FIN TENÍA SU CARNE!</p>
+            <span class="num">A2</span>
+          </div>
+        </div>
+
+        <!-- 15 · CAMINO A -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-a">
+            <span class="cinta cinta--a">CAMINO A</span>
+            <img class="ilus" src="img/escena-a3.svg" alt="Galáctico, contento, devuelve la esmeralda">
+            <p class="texto">CON LA PANZA LLENA, <b class="c-galactico">GALÁCTICO</b> SE PUSO CONTENTO. ABRIÓ LA JAULA DE HUELLITAS Y LES DEVOLVIÓ LA ESMERALDA. —¡GRACIAS! —DIJO.</p>
+            <span class="num">A3</span>
+          </div>
+        </div>
+
+        <!-- 16 · FIN A -->
+        <div class="page" data-rol="a-fin">
+          <div class="hoja hoja--fin camino-a">
+            <img class="ilus ilus--chica" src="img/escena-fin-a.svg" alt="Los tres amigos frente a Marte, que vuelve a brillar con su esmeralda">
+            <p class="texto">VOLARON A MARTE Y PUSIERON LA ESMERALDA EN SU LUGAR. ¡MARTE SE SALVÓ! Y <b class="c-huellitas">HUELLITAS</b> CONSIGUIÓ UN NUEVO AMIGO: EL <b class="c-extra">EXTRATERRESTRE</b>.</p>
+            <p class="sello">FIN <small>DEL CAMINO A</small></p>
+            <div class="acciones">
+              <button class="btn btn--chico" type="button" data-ir="B">🔁 LEER EL FINAL B</button>
+              <button class="btn btn--chico btn--claro" type="button" data-ir="creditos">⭐ VER LOS AUTORES</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17 · CAMINO B -->
+        <div class="page" data-rol="b-inicio">
+          <div class="hoja hoja--cuento camino-b">
+            <span class="cinta cinta--b">CAMINO B</span>
+            <img class="ilus" src="img/escena-b1.svg" alt="Huellitas tira la pelota desde la jaula y Galáctico la mira">
+            <p class="texto"><b class="c-huellitas">HUELLITAS</b> TIRÓ SU PELOTA ENTRE LAS REJAS. <b class="c-galactico">GALÁCTICO</b> LA MIRÓ CON SU OJO GRANDE. <span class="sonido">¡BOING, BOING!</span> ¿QUÉ ES ESO?</p>
+            <span class="num">B1</span>
+          </div>
+        </div>
+
+        <!-- 18 · CAMINO B -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-b">
+            <span class="cinta cinta--b">CAMINO B</span>
+            <img class="ilus" src="img/escena-b2.svg" alt="Galáctico juega con la pelota y se ríe">
+            <p class="texto"><b class="c-galactico">GALÁCTICO</b> ATRAPÓ LA PELOTA Y SE RIÓ: <span class="sonido">¡JA, JA, JA!</span> ¡POR FIN ALGO LE GUSTABA! ABRIÓ LA JAULA PARA JUGAR CON HUELLITAS.</p>
+            <span class="num">B2</span>
+          </div>
+        </div>
+
+        <!-- 19 · CAMINO B -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-b">
+            <span class="cinta cinta--b">CAMINO B</span>
+            <img class="ilus" src="img/escena-b3.svg" alt="El cohete vuela rumbo a Marte con la esmeralda">
+            <p class="texto">JUGARON TANTO QUE <b class="c-galactico">GALÁCTICO</b> SE VOLVIÓ AMABLE. LES DEVOLVIÓ LA ESMERALDA Y SUBIÓ AL COHETE CON ELLOS, RUMBO A MARTE.</p>
+            <span class="num">B3</span>
+          </div>
+        </div>
+
+        <!-- 20 · FIN B -->
+        <div class="page" data-rol="b-fin">
+          <div class="hoja hoja--fin camino-b">
+            <img class="ilus ilus--chica" src="img/escena-fin-b.svg" alt="Huellitas y Galáctico juegan a la pelota en el espacio">
+            <p class="texto">PUSIERON LA ESMERALDA Y MARTE SE SALVÓ. <b class="c-huellitas">HUELLITAS</b> CONSIGUIÓ UN NUEVO AMIGO: ¡<b class="c-galactico">GALÁCTICO</b>! AHORA JUEGAN A LA PELOTA ENTRE LAS ESTRELLAS.</p>
+            <p class="sello">FIN <small>DEL CAMINO B</small></p>
+            <div class="acciones">
+              <button class="btn btn--chico" type="button" data-ir="A">🔁 LEER EL FINAL A</button>
+              <button class="btn btn--chico btn--claro" type="button" data-ir="creditos">⭐ VER LOS AUTORES</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 21 · CRÉDITOS (revisar la ortografía de los nombres) -->
+        <div class="page" data-rol="creditos">
+          <div class="hoja">
+            <h3 class="hoja__titulo">ESCRIBIERON E IMAGINARON ESTE CUENTO</h3>
+            <div class="creditos">
+              <div class="grupo grupo--g1">
+                <h4>👽 SIX SEVEN 67</h4>
+                <p>FELIPE · LUZ · JULIÁN · BRUNO · PALO · ESPE · MAXI · ZIKI</p>
+              </div>
+              <div class="grupo grupo--g2">
+                <h4>🐶 MENDOZA</h4>
+                <p>ROCCO · DONATELLA · FRANCA · LOLA · CORI · BALTA · LOREN · BAUTI</p>
+              </div>
+              <div class="grupo grupo--g3">
+                <h4>🎩 GATO CON SOMBRERO</h4>
+                <p>LORENZO S. · UZI · OLI · MERCE · FELICITAS · JULIA · CAMILA · MÍA</p>
+              </div>
+            </div>
+            <p class="nota">1º GRADO B · COLEGIO ICEI · 2026</p>
+          </div>
+        </div>
+
+        <!-- 22 · CIERRE -->
+        <div class="page">
+          <div class="hoja hoja--centro">
+            <h3 class="hoja__titulo">¿QUÉ FINAL TE GUSTÓ MÁS?</h3>
+            <div class="votos">
+              <button class="voto voto--a" type="button" data-ir="A"><i>A</i>LA POCIÓN MÁGICA</button>
+              <button class="voto voto--b" type="button" data-ir="B"><i>B</i>LA PELOTA</button>
+            </div>
+            <p class="nota nota--arriba">TOCÁ UNA LETRA PARA VOLVER A LEER ESE CAMINO.</p>
+            <div class="mini-dibujos" aria-hidden="true">
+              <img src="img/dibujo-huellitas.jpg" alt=""><img src="img/dibujo-extraterrestre.jpg" alt=""><img src="img/dibujo-galactico.jpg" alt="">
+            </div>
+            <p class="gracias">¡GRACIAS POR LEER NUESTRO CUENTO!</p>
+            <button class="btn btn--chico" type="button" data-ir="inicio">🏠 VOLVER AL INICIO</button>
+          </div>
+        </div>
+
+        <!-- 23 · CONTRATAPA -->
+        <div class="page tapa tapa--atras" data-density="hard">
+          <div class="tapa__inner">
+            <img class="tapa__ilus" src="img/contratapa.svg" alt="">
+            <p class="contratapa__texto">¡SE PERDIÓ LA ESMERALDA MÁS IMPORTANTE DE MARTE!<br><br>UN PERRITO PELUDO, UN EXTRATERRESTRE AMABLE Y UN MONSTRUO CON UN SOLO OJO VIVEN UNA AVENTURA EN EL ESPACIO.<br><b>¡Y VOS ELEGÍS EL CAMINO!</b></p>
+            <p class="tapa__pie">CUENTOS QUE ABREN CAMINOS · COLEGIO ICEI</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <nav class="nav" aria-label="Navegación del libro">
+    <button id="btnAnterior" class="btn btn--flecha" type="button" aria-label="Página anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+      <span>ANTERIOR</span>
+    </button>
+    <div class="nav__centro">
+      <p id="indicador" class="nav__indicador">1 / 24</p>
+      <div class="progreso" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100">
+        <div id="barraProgreso" class="progreso__barra"></div>
+      </div>
+    </div>
+    <button id="btnSiguiente" class="btn btn--flecha" type="button" aria-label="Página siguiente">
+      <span>SIGUIENTE</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+    </button>
+  </nav>
+
+  <!-- Aviso cuando hay que elegir un camino -->
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+  <!-- Biblioteca StPageFlip (MIT) incluida localmente para que funcione sin internet -->
+  <script src="lib/page-flip.browser.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

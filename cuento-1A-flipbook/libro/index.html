@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>El misterio de las huellas brillantes · 1º A · Colegio ICEI</title>
+  <meta name="description" content="Cuento interactivo de elige tu propia aventura escrito por 1º A del Colegio ICEI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cielo de fondo con estrellas animadas -->
+  <div class="cielo" aria-hidden="true">
+    <div class="estrellas capa1"></div>
+    <div class="estrellas capa2"></div>
+  </div>
+
+  <!-- ============ PANTALLA DE BIENVENIDA ============ -->
+  <section id="bienvenida" class="bienvenida">
+    <div class="bienvenida__caja">
+      <p class="bienvenida__curso">COLEGIO ICEI · 1º A · ¡SOMOS ESCRITORES!</p>
+      <h1 class="bienvenida__titulo">EL MISTERIO DE LAS<br><span>HUELLAS BRILLANTES</span></h1>
+      <div class="bienvenida__personajes">
+        <img src="img/dibujo-lito.jpg" alt="Dibujo de Lito">
+        <img src="img/dibujo-coquito.jpg" alt="Dibujo de Coquito">
+        <img src="img/dibujo-tuerquitas.jpg" alt="Dibujo de Tuerquitas">
+      </div>
+      <p class="bienvenida__sub">UN CUENTO DONDE <b>VOS ELEGÍS</b> QUÉ SUCEDE</p>
+      <button id="btnEmpezar" class="btn btn--grande" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        EMPEZAR A LEER
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ BARRA SUPERIOR ============ -->
+  <header class="barra">
+    <button id="btnInicio" class="btn btn--icono" type="button" title="Volver al inicio" aria-label="Volver al inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></svg>
+    </button>
+    <p class="barra__titulo">EL MISTERIO DE LAS HUELLAS BRILLANTES</p>
+    <button id="btnPantalla" class="btn btn--icono" type="button" title="Pantalla completa" aria-label="Pantalla completa">
+      <svg class="ico-abrir" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"/></svg>
+      <svg class="ico-cerrar" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h2v6H4V8h4zm6 0h2v4h4v2h-6zM4 14h6v6H8v-4H4zm10 0h6v2h-4v4h-2z"/></svg>
+    </button>
+  </header>
+
+  <!-- ============ ESCENARIO DEL LIBRO ============ -->
+  <main id="escenario" class="escenario">
+    <div id="soporte" class="soporte">
+      <div id="libro" class="libro">
+
+        <!-- 0 · TAPA -->
+        <div class="page tapa" data-density="hard">
+          <div class="tapa__inner">
+            <p class="tapa__curso">COLEGIO ICEI · 1º A</p>
+            <h2 class="tapa__titulo">EL MISTERIO DE LAS <span>HUELLAS BRILLANTES</span></h2>
+            <img class="tapa__ilus" src="img/tapa.svg" alt="Lito, Coquito y Tuerquitas frente a la escuela misteriosa">
+            <p class="tapa__pie">UN CUENTO PARA ELEGIR TU PROPIA AVENTURA</p>
+          </div>
+        </div>
+
+        <!-- 1 · PORTADILLA -->
+        <div class="page">
+          <div class="hoja hoja--centro">
+            <p class="etiqueta">CUENTOS QUE ABREN CAMINOS</p>
+            <h3 class="portadilla__titulo">EL MISTERIO DE LAS HUELLAS BRILLANTES</h3>
+            <p class="portadilla__autores">UN CUENTO ESCRITO E IMAGINADO POR<br>
+              <b class="c-leones">LOS LEONES</b>, <b class="c-jaguares">LOS JAGUARES</b><br>Y <b class="c-tiburones">LOS TIBURONES</b>
+            </p>
+            <p class="portadilla__curso">1º GRADO A · COLEGIO ICEI · 2026</p>
+            <div class="huellitas" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+        <!-- 2 · CÓMO SE LEE -->
+        <div class="page">
+          <div class="hoja">
+            <h3 class="hoja__titulo">¿QUÉ ES UN CUENTO INTERACTIVO?</h3>
+            <ol class="pasos">
+              <li><span class="pasos__ico">📖</span>LEÉS EL CUENTO.</li>
+              <li><span class="pasos__ico">🪧</span>LLEGÁS A UN CRUCE. ¿QUÉ HACE EL PERSONAJE?</li>
+              <li><span class="pasos__ico"><i class="ab ab--a">A</i><i class="ab ab--b">B</i></span>VOS ELEGÍS EL CAMINO.</li>
+              <li><span class="pasos__ico">🏁</span>CADA CAMINO TIENE SU FINAL.</li>
+            </ol>
+            <p class="nota">TOCÁ LAS FLECHAS DE ABAJO PARA PASAR LAS PÁGINAS.</p>
+          </div>
+        </div>
+
+        <!-- 3 · NUESTROS PERSONAJES (dibujos originales) -->
+        <div class="page">
+          <div class="hoja">
+            <h3 class="hoja__titulo">NUESTROS PERSONAJES</h3>
+            <div class="galeria">
+              <figure class="ficha">
+                <img src="img/dibujo-lito.jpg" alt="Dibujo de Lito hecho por Los Leones">
+                <figcaption><b class="c-lito">LITO</b> TIERNO Y JUGUETÓN. QUIERE UNA PELOTA.<small>LOS LEONES</small></figcaption>
+              </figure>
+              <figure class="ficha">
+                <img src="img/dibujo-coquito.jpg" alt="Dibujo de Coquito hecho por Los Jaguares">
+                <figcaption><b class="c-coquito">COQUITO</b> PEQUEÑO Y RÁPIDO.<small>LOS JAGUARES</small></figcaption>
+              </figure>
+              <figure class="ficha">
+                <img src="img/dibujo-tuerquitas.jpg" alt="Dibujo de Tuerquitas hecho por Los Tiburones">
+                <figcaption><b class="c-tuerquitas">TUERQUITAS</b> BRILLANTE Y AMABLE.<small>LOS TIBURONES</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 · NUESTROS LUGARES (dibujos originales) -->
+        <div class="page">
+          <div class="hoja">
+            <h3 class="hoja__titulo">NUESTROS LUGARES</h3>
+            <div class="lugares">
+              <figure><img src="img/dibujo-escuela.jpg" alt="Dibujo de la escuela misteriosa"><figcaption>LA ESCUELA MISTERIOSA <small>LOS JAGUARES</small></figcaption></figure>
+              <figure><img src="img/dibujo-bosque.jpg" alt="Dibujo del bosque encantado"><figcaption>EL BOSQUE ENCANTADO <small>LOS LEONES</small></figcaption></figure>
+              <figure><img src="img/dibujo-montana.jpg" alt="Dibujo de la montaña mágica"><figcaption>LA MONTAÑA MÁGICA <small>LOS TIBURONES</small></figcaption></figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 · HISTORIA -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-escuela.svg" alt="Una escuela de noche, silenciosa y oscura">
+            <p class="texto">HACE MUCHO TIEMPO, HABÍA UNA <b>ESCUELA MUY MISTERIOSA</b>. DE NOCHE ERA SILENCIOSA Y OSCURA. SOLO SE ESCUCHABA: <span class="sonido">¡ZZZZ!</span></p>
+            <span class="num">1</span>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-coquito.svg" alt="Coquito corre por el pasillo y escucha un toc toc">
+            <p class="texto">ALLÍ VIVÍA <b class="c-coquito">COQUITO</b>, UN PERRO PEQUEÑO Y MUY RÁPIDO. UNA NOCHE, MIENTRAS CORRÍA POR LOS PASILLOS, ESCUCHÓ: <span class="sonido">¡TOC, TOC!</span></p>
+            <span class="num">2</span>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-lito.svg" alt="Lito en el bosque encantado sueña con una pelota">
+            <p class="texto">AL LADO DE LA ESCUELA HABÍA UN <b>BOSQUE ENCANTADO</b>. ALLÍ JUGABA <b class="c-lito">LITO</b>, UN PERRO TIERNO Y JUGUETÓN. LITO SOÑABA CON TENER UNA PELOTA.</p>
+            <span class="num">3</span>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-tuerquitas.svg" alt="Tuerquitas en la montaña mágica que brilla">
+            <p class="texto">MUY CERCA, EN LA <b>MONTAÑA MÁGICA</b>, TODO BRILLABA. ALLÍ VIVÍA <b class="c-tuerquitas">TUERQUITAS</b>, UN ROBOT GALÁCTICO BRILLANTE Y AMABLE.</p>
+            <span class="num">4</span>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-crac.svg" alt="La montaña mágica se derrumba con un gran crac">
+            <p class="texto">DE PRONTO… <span class="sonido sonido--rojo">¡CRAC!</span> ¡LA MONTAÑA MÁGICA SE DERRUMBÓ Y SE APAGÓ SU LUZ! <b class="c-tuerquitas">TUERQUITAS</b> RODÓ Y RODÓ HASTA LA ESCUELA.</p>
+            <span class="num">5</span>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-huellas.svg" alt="Huellas brillantes en el piso y una sombra misteriosa en la puerta">
+            <p class="texto"><b class="c-lito">LITO</b> Y <b class="c-coquito">COQUITO</b> VIERON UNAS <b>HUELLAS BRILLANTES</b> EN EL PISO. ¿DE QUIÉN SERÁN? ¡OH, NO! ¡APARECIÓ UN PERSONAJE MISTERIOSO!</p>
+            <span class="num">6</span>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="page">
+          <div class="hoja hoja--cuento">
+            <img class="ilus" src="img/escena-ayuda.svg" alt="Tuerquitas, triste, les pide ayuda a Lito y Coquito">
+            <p class="texto">¡ERA <b class="c-tuerquitas">TUERQUITAS</b>! —HOLA, AMIGOS. MI MONTAÑA SE QUEDÓ SIN LUZ. NECESITO ENCONTRAR EL <b>TESORO MISTERIOSO</b> PARA QUE VUELVA A BRILLAR. ¿ME AYUDAN?</p>
+            <span class="num">7</span>
+          </div>
+        </div>
+
+        <!-- 12 · CRUCE DE CAMINOS -->
+        <div class="page" data-rol="cruce">
+          <div class="hoja hoja--cruce">
+            <p class="etiqueta etiqueta--cruce">¡LLEGASTE A UN CRUCE!</p>
+            <img class="ilus ilus--chica" src="img/escena-cruce.svg" alt="Un cartel con dos caminos: A hacia la escuela y B hacia la montaña">
+            <p class="pregunta">¿QUÉ HACEN LOS AMIGOS? <b>VOS ELEGÍS.</b></p>
+            <div class="opciones">
+              <button class="opcion opcion--a" type="button" data-camino="A">
+                <i>A</i><span>SIGUEN LAS HUELLAS POR LA ESCUELA OSCURA</span>
+              </button>
+              <button class="opcion opcion--b" type="button" data-camino="B">
+                <i>B</i><span>SUBEN A LA MONTAÑA MÁGICA</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 · CAMINO A -->
+        <div class="page" data-rol="a-inicio">
+          <div class="hoja hoja--cuento camino-a">
+            <span class="cinta cinta--a">CAMINO A</span>
+            <img class="ilus" src="img/escena-a1.svg" alt="Tuerquitas ilumina la escuela y Coquito encuentra una puerta secreta">
+            <p class="texto">LOS TRES AMIGOS SIGUIERON LAS HUELLAS. LA ESCUELA ESTABA MUY OSCURA, PERO <b class="c-tuerquitas">TUERQUITAS</b> ILUMINÓ EL CAMINO. ¡<b class="c-coquito">COQUITO</b> CORRIÓ RÁPIDO Y ENCONTRÓ UNA <b>PUERTA SECRETA</b>!</p>
+            <span class="num">A1</span>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-a">
+            <span class="cinta cinta--a">CAMINO A</span>
+            <img class="ilus" src="img/escena-a2.svg" alt="Un cofre abierto con una pelota mágica que brilla">
+            <p class="texto">DETRÁS DE LA PUERTA HABÍA UN COFRE. LO ABRIERON Y… ¡ERA EL TESORO! UNA <b>PELOTA MÁGICA</b> QUE BRILLABA COMO UNA ESTRELLA.</p>
+            <span class="num">A2</span>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-a">
+            <span class="cinta cinta--a">CAMINO A</span>
+            <img class="ilus" src="img/escena-a3.svg" alt="La montaña vuelve a brillar y Lito recibe la pelota">
+            <p class="texto">TUERQUITAS USÓ LA LUZ DE LA PELOTA Y LA MONTAÑA VOLVIÓ A BRILLAR. —¡GRACIAS, AMIGOS! —DIJO. Y LE REGALÓ LA PELOTA A <b class="c-lito">LITO</b>.</p>
+            <span class="num">A3</span>
+          </div>
+        </div>
+
+        <!-- 16 · FIN A -->
+        <div class="page" data-rol="a-fin">
+          <div class="hoja hoja--fin camino-a">
+            <img class="ilus ilus--chica" src="img/escena-fin-a.svg" alt="Los tres amigos juegan con la pelota frente a la escuela">
+            <p class="texto">DESDE ESE DÍA, <b class="c-lito">LITO</b>, <b class="c-coquito">COQUITO</b> Y <b class="c-tuerquitas">TUERQUITAS</b> JUEGAN JUNTOS TODAS LAS NOCHES EN LA ESCUELA MISTERIOSA.</p>
+            <p class="sello">FIN <small>DEL CAMINO A</small></p>
+            <div class="acciones">
+              <button class="btn btn--chico" type="button" data-ir="B">🔁 LEER EL FINAL B</button>
+              <button class="btn btn--chico btn--claro" type="button" data-ir="creditos">⭐ VER LOS AUTORES</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17 · CAMINO B -->
+        <div class="page" data-rol="b-inicio">
+          <div class="hoja hoja--cuento camino-b">
+            <span class="cinta cinta--b">CAMINO B</span>
+            <img class="ilus" src="img/escena-b1.svg" alt="Un pajarito bebé atrapado entre piedras en la montaña">
+            <p class="texto">LOS TRES AMIGOS SUBIERON A LA MONTAÑA MÁGICA. ARRIBA SE ESCUCHABA: <span class="sonido">¡PÍO, PÍO!</span> ERA UN <b>PAJARITO BEBÉ</b> ATRAPADO ENTRE LAS PIEDRAS.</p>
+            <span class="num">B1</span>
+          </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-b">
+            <span class="cinta cinta--b">CAMINO B</span>
+            <img class="ilus" src="img/escena-b2.svg" alt="Los amigos mueven las piedras y el pajarito queda libre">
+            <p class="texto"><b class="c-lito">LITO</b> Y <b class="c-coquito">COQUITO</b> MOVIERON LAS PIEDRAS. <b class="c-tuerquitas">TUERQUITAS</b> ILUMINÓ EL CAMINO. ¡EL PAJARITO QUEDÓ LIBRE!</p>
+            <span class="num">B2</span>
+          </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="page">
+          <div class="hoja hoja--cuento camino-b">
+            <span class="cinta cinta--b">CAMINO B</span>
+            <img class="ilus" src="img/escena-b3.svg" alt="La mamá pájaro les regala una estrella brillante">
+            <p class="texto">LA MAMÁ PÁJARO LES DIO LAS GRACIAS CON UN REGALO: ¡EL TESORO MISTERIOSO! ERA UNA <b>ESTRELLA BRILLANTE</b>.</p>
+            <span class="num">B3</span>
+          </div>
+        </div>
+
+        <!-- 20 · FIN B -->
+        <div class="page" data-rol="b-fin">
+          <div class="hoja hoja--fin camino-b">
+            <img class="ilus ilus--chica" src="img/escena-fin-b.svg" alt="La montaña mágica vuelve a brillar con la estrella en la cima">
+            <p class="texto">TUERQUITAS PUSO LA ESTRELLA EN LA CIMA Y LA MONTAÑA VOLVIÓ A BRILLAR. DESDE ESE DÍA, EL PAJARITO CANTA <span class="sonido">PÍO, PÍO</span> PARA SUS TRES AMIGOS.</p>
+            <p class="sello">FIN <small>DEL CAMINO B</small></p>
+            <div class="acciones">
+              <button class="btn btn--chico" type="button" data-ir="A">🔁 LEER EL FINAL A</button>
+              <button class="btn btn--chico btn--claro" type="button" data-ir="creditos">⭐ VER LOS AUTORES</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 21 · CRÉDITOS (revisar la ortografía de los nombres) -->
+        <div class="page" data-rol="creditos">
+          <div class="hoja">
+            <h3 class="hoja__titulo">ESCRIBIERON E IMAGINARON ESTE CUENTO</h3>
+            <div class="creditos">
+              <div class="grupo grupo--leones">
+                <h4>🦁 LOS LEONES</h4>
+                <p>OLIVIA · JOSÉ · VALENTINA · FAUSTI · TORVI · TOMI R. · LOLA · FEDE</p>
+              </div>
+              <div class="grupo grupo--jaguares">
+                <h4>🐆 LOS JAGUARES</h4>
+                <p>AMADEO · MATEO · CATALINA · EMILIA · TATO · PAGANO · LEO · SAFI · SANTI · MARTI · GUILLE</p>
+              </div>
+              <div class="grupo grupo--tiburones">
+                <h4>🦈 LOS TIBURONES</h4>
+                <p>ASTOR · VALENTINO · JOAQUÍN · MARGA · GUINA · ALFONSO · TOMI B.</p>
+              </div>
+            </div>
+            <p class="nota">1º GRADO A · COLEGIO ICEI · 2026</p>
+          </div>
+        </div>
+
+        <!-- 22 · CIERRE -->
+        <div class="page">
+          <div class="hoja hoja--centro">
+            <h3 class="hoja__titulo">¿QUÉ FINAL TE GUSTÓ MÁS?</h3>
+            <div class="votos">
+              <button class="voto voto--a" type="button" data-ir="A"><i>A</i>LA PELOTA MÁGICA</button>
+              <button class="voto voto--b" type="button" data-ir="B"><i>B</i>EL PAJARITO BEBÉ</button>
+            </div>
+            <p class="nota nota--arriba">TOCÁ UNA LETRA PARA VOLVER A LEER ESE CAMINO.</p>
+            <div class="mini-dibujos" aria-hidden="true">
+              <img src="img/dibujo-lito.jpg" alt=""><img src="img/dibujo-coquito.jpg" alt=""><img src="img/dibujo-tuerquitas.jpg" alt="">
+            </div>
+            <p class="gracias">¡GRACIAS POR LEER NUESTRO CUENTO!</p>
+            <button class="btn btn--chico" type="button" data-ir="inicio">🏠 VOLVER AL INICIO</button>
+          </div>
+        </div>
+
+        <!-- 23 · CONTRATAPA -->
+        <div class="page tapa tapa--atras" data-density="hard">
+          <div class="tapa__inner">
+            <img class="tapa__ilus" src="img/contratapa.svg" alt="">
+            <p class="contratapa__texto">¿DE QUIÉN SERÁN ESAS HUELLAS QUE BRILLAN EN LA OSCURIDAD?<br><br>UN PERRO TIERNO, UN PERRITO MUY RÁPIDO Y UN ROBOT GALÁCTICO SE ANIMAN A DESCUBRIRLO.<br><b>¡Y VOS ELEGÍS EL CAMINO!</b></p>
+            <p class="tapa__pie">CUENTOS QUE ABREN CAMINOS · COLEGIO ICEI</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <nav class="nav" aria-label="Navegación del libro">
+    <button id="btnAnterior" class="btn btn--flecha" type="button" aria-label="Página anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
+      <span>ANTERIOR</span>
+    </button>
+    <div class="nav__centro">
+      <p id="indicador" class="nav__indicador">1 / 24</p>
+      <div class="progreso" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100">
+        <div id="barraProgreso" class="progreso__barra"></div>
+      </div>
+    </div>
+    <button id="btnSiguiente" class="btn btn--flecha" type="button" aria-label="Página siguiente">
+      <span>SIGUIENTE</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
+    </button>
+  </nav>
+
+  <!-- Aviso cuando hay que elegir un camino -->
+  <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+  <!-- Biblioteca StPageFlip (MIT) incluida localmente para que funcione sin internet -->
+  <script src="lib/page-flip.browser.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
