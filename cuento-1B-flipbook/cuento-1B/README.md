@@ -19,3 +19,8 @@ Lo escribieron e imaginaron Six Seven 67, Mendoza y Gato con Sombrero de 1º B.
 La página marcada con `data-rol="cruce"` pide elegir A o B. Desde el final A, la flecha
 "siguiente" lleva a los créditos; desde el camino B, "anterior" vuelve al cruce.
 Si se agregan páginas, conviene mantener la cantidad total par y los atributos `data-rol`.
+
+## Audios
+En la contratapa hay dos botones: "Escuchar la contratapa" y "Opiniones de lectores".
+Reproducen `audio/contratapa.mp3` y `audio/opiniones.mp3`. Para cambiar un audio,
+reemplazá el archivo en la carpeta `audio/` manteniendo el mismo nombre.
