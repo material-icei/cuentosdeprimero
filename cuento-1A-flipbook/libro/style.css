@@ -442,3 +442,28 @@ body.pantalla-completa #btnPantalla .ico-cerrar { display: block; }
 .mini-dibujos img:nth-child(1) { transform: rotate(-4deg); }
 .mini-dibujos img:nth-child(3) { transform: rotate(4deg); }
 .gracias { font-size: 4.8cqw; color: var(--noche-2); margin-bottom: 2cqh; }
+
+/* ---------- Botones de audio de la contratapa ---------- */
+.tapa--atras .tapa__ilus { width: 64%; }
+.tapa--atras .tapa__pie { font-size: 2.8cqw; }
+.tapa--atras .audios { margin: 1.5cqw 0; }
+.tapa--atras .contratapa__texto { font-size: 4.2cqw; line-height: 1.4; }
+.audios { width: 100%; display: flex; flex-direction: column; gap: 2.4cqw; }
+.btn-audio {
+  display: flex; align-items: center; justify-content: center; gap: 2.5cqw;
+  width: 100%; padding: 2.6cqw 3cqw; border-radius: 999px;
+  font-size: 4cqw; font-weight: 700; color: var(--tinta);
+  background: var(--oro); border: .6cqw solid #fff;
+  box-shadow: 0 1cqw 0 #c99d00, 0 0 4cqw #ffd84a66;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.btn-audio--opiniones { background: var(--cian); box-shadow: 0 1cqw 0 #2aa3b3, 0 0 4cqw #7ff3ff66; }
+.btn-audio:hover { transform: translateY(-.4cqw); }
+.btn-audio:active { transform: translateY(.8cqw); box-shadow: none; }
+.btn-audio__ico { font-size: 5cqw; line-height: 1; }
+.ondas { display: none; align-items: flex-end; gap: .7cqw; height: 4cqw; }
+.ondas i { width: .9cqw; height: 100%; background: var(--tinta); border-radius: 1cqw; animation: onda .8s ease-in-out infinite; }
+.ondas i:nth-child(2) { animation-delay: -.25s; }
+.ondas i:nth-child(3) { animation-delay: -.5s; }
+.btn-audio.sonando .ondas { display: flex; }
+@keyframes onda { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }

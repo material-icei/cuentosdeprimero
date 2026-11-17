@@ -107,6 +107,7 @@
 
     libro.on('flip', () => {
       const v = visibles();
+      if (!v.includes(P.ULTIMA)) detenerAudios();   // al salir de la contratapa se corta el audio
       if (v.includes(P.A_FIN)) ultimoFinal = 'A';
       if (v.includes(P.B_FIN)) ultimoFinal = 'B';
       actualizarUI();
@@ -180,6 +181,8 @@
   }
 
   libroEl.addEventListener('click', (e) => {
+    const botonAudio = e.target.closest('[data-audio]');
+    if (botonAudio) { alternarAudio(botonAudio); return; }
     const camino = e.target.closest('[data-camino]');
     const ir = e.target.closest('[data-ir]');
     if (camino) {
@@ -189,6 +192,49 @@
       accionPagina(ir.dataset.ir);
     }
   });
+
+  /* ---------- Audios (contratapa y opiniones de lectores) ---------- */
+  const botonesAudio = document.querySelectorAll('[data-audio]');
+
+  function textoBoton(boton, sonando) {
+    const t = boton.querySelector('.btn-audio__texto');
+    if (!t.dataset.original) t.dataset.original = t.textContent;
+    t.textContent = sonando ? 'PAUSAR' : t.dataset.original;
+    boton.querySelector('.btn-audio__ico').textContent = sonando ? '⏸' : (boton.classList.contains('btn-audio--opiniones') ? '💬' : '🔊');
+    boton.classList.toggle('sonando', sonando);
+    boton.setAttribute('aria-pressed', sonando ? 'true' : 'false');
+  }
+
+  function detenerAudios(excepto) {
+    botonesAudio.forEach((boton) => {
+      const audio = document.getElementById(boton.dataset.audio);
+      if (audio && audio !== excepto && !audio.paused) audio.pause();
+    });
+  }
+
+  botonesAudio.forEach((boton) => {
+    const audio = document.getElementById(boton.dataset.audio);
+    if (!audio) return;
+    audio.addEventListener('play', () => textoBoton(boton, true));
+    audio.addEventListener('pause', () => textoBoton(boton, false));
+    audio.addEventListener('ended', () => { audio.currentTime = 0; textoBoton(boton, false); });
+    audio.addEventListener('error', () => {
+      textoBoton(boton, false);
+      mostrarAviso('NO SE PUDO CARGAR EL AUDIO');
+    });
+  });
+
+  function alternarAudio(boton) {
+    const audio = document.getElementById(boton.dataset.audio);
+    if (!audio) return;
+    if (audio.paused) {
+      detenerAudios(audio);                  // suena un solo audio por vez
+      const promesa = audio.play();
+      if (promesa && promesa.catch) promesa.catch(() => mostrarAviso('TOCÁ DE NUEVO PARA ESCUCHAR'));
+    } else {
+      audio.pause();
+    }
+  }
 
   /* En pantallas anchas, la tapa cerrada se ve centrada (como un libro real) */
   function centrarTapa(v) {
