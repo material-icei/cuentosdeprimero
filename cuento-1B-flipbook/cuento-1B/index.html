@@ -296,11 +296,11 @@
             <div class="creditos">
               <div class="grupo grupo--g1">
                 <h4>👽 SIX SEVEN 67</h4>
-                <p>FELIPE · LUZ · JULIÁN · BRUNO · PALO · ESPE · MARTI · TUTI · ÁLVARO · CATALINA</p>
+                <p>FELIPE · LUZ · JULIÁN · BRUNO · PALO · ESPE · MAXI · ZIKI</p>
               </div>
               <div class="grupo grupo--g2">
                 <h4>🐶 MENDOZA</h4>
-                <p>ROCCO · DONATELLA · FRANCA · LOLA · CORI · BALTA · LOREN · BAUTI · GINA · CLARI</p>
+                <p>ROCCO · DONATELLA · FRANCA · LOLA · CORI · BALTA · LOREN · BAUTI</p>
               </div>
               <div class="grupo grupo--g3">
                 <h4>🎩 GATO CON SOMBRERO</h4>
@@ -332,7 +332,20 @@
         <div class="page tapa tapa--atras" data-density="hard">
           <div class="tapa__inner">
             <img class="tapa__ilus" src="img/contratapa.svg" alt="">
-            <p class="contratapa__texto">¡SE PERDIÓ LA ESMERALDA MÁS IMPORTANTE DE MARTE!<br><br>UN PERRITO PELUDO, UN EXTRATERRESTRE AMABLE Y UN MONSTRUO CON UN SOLO OJO VIVEN UNA AVENTURA EN EL ESPACIO.<br><b>¡Y VOS ELEGÍS EL CAMINO!</b></p>
+            <p class="contratapa__texto">¡SE PERDIÓ LA ESMERALDA MÁS IMPORTANTE DE MARTE! UN PERRITO PELUDO, UN EXTRATERRESTRE AMABLE Y UN MONSTRUO CON UN SOLO OJO VIVEN UNA AVENTURA EN EL ESPACIO.<br><b>¡Y VOS ELEGÍS EL CAMINO!</b></p>
+            <!-- Audios: los archivos están en la carpeta audio/ -->
+            <div class="audios">
+              <button class="btn-audio" type="button" data-audio="audioContratapa" aria-pressed="false">
+                <span class="btn-audio__ico" aria-hidden="true">🔊</span>
+                <span class="btn-audio__texto">ESCUCHAR LA CONTRATAPA</span>
+                <span class="ondas" aria-hidden="true"><i></i><i></i><i></i></span>
+              </button>
+              <button class="btn-audio btn-audio--opiniones" type="button" data-audio="audioOpiniones" aria-pressed="false">
+                <span class="btn-audio__ico" aria-hidden="true">💬</span>
+                <span class="btn-audio__texto">OPINIONES DE LECTORES</span>
+                <span class="ondas" aria-hidden="true"><i></i><i></i><i></i></span>
+              </button>
+            </div>
             <p class="tapa__pie">CUENTOS QUE ABREN CAMINOS · COLEGIO ICEI</p>
           </div>
         </div>
@@ -358,6 +371,10 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
     </button>
   </nav>
+
+  <!-- Audios de la contratapa (carpeta audio/ del repositorio) -->
+  <audio id="audioContratapa" src="audio/contratapa.mp3" preload="none"></audio>
+  <audio id="audioOpiniones" src="audio/opiniones.mp3" preload="none"></audio>
 
   <!-- Aviso cuando hay que elegir un camino -->
   <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
